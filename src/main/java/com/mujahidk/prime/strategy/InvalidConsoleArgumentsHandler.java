@@ -1,5 +1,9 @@
 package com.mujahidk.prime.strategy;
 
+/**
+ * When invalid arguments are passed, this handler is used to write usage message to console.
+ *
+ */
 public class InvalidConsoleArgumentsHandler
         implements IHandler {
 

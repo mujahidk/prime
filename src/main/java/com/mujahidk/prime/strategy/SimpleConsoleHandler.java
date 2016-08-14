@@ -1,9 +1,12 @@
 package com.mujahidk.prime.strategy;
 
-import com.mujahidk.prime.module.ConsoleCollector;
 import com.mujahidk.prime.module.IPrimeCollector;
 import com.mujahidk.prime.module.SlowPrimeFinder;
 
+/**
+ * Simple application execution strategy. Does not use threading. 
+ *
+ */
 public class SimpleConsoleHandler
         implements IHandler {
 
@@ -15,8 +18,11 @@ public class SimpleConsoleHandler
 
     @Override
     public void handle() {
+        // Use ConsoleHandler to write prime number to console and keep track of prime number counts.
         IPrimeCollector collector = new ConsoleCollector();
+        // Use the finder to find the prime numbers from 1 to given limit.
         new SlowPrimeFinder(limit, collector).find();
+        // After finding all, print the prime count.
         System.out.println("Primes Found: " + collector.count());
     }
 

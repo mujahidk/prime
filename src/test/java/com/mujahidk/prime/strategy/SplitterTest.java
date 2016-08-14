@@ -15,7 +15,6 @@ public class SplitterTest {
 
     @Test
     public void testSplit() {
-        
         Splitter handler = new Splitter(0, 0);
         List<Pair<Integer,Integer>> result = handler.split();
         assertEquals("When there is 0 thread count and 0 limit, nothing to do.", 
@@ -31,12 +30,12 @@ public class SplitterTest {
         
         for (Entry<Pair<Integer, Integer>, Integer> entry : testData.entrySet()) {
             Pair<Integer,Integer> pair = entry.getKey();
+            // Create splitter for each test data value.
             handler = new Splitter( pair.getFirst(), pair.getSecond() );
             List<Pair<Integer, Integer>> split = handler.split();
-            assertEquals( "Number of pairs for each thread to process is mismatched.", 
+            assertEquals( "Number of start to end pairs for thread range is mismatching.", 
                           entry.getValue().intValue(), 
                           split.size() );
         }
     }
-
 }

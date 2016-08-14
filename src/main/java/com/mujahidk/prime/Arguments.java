@@ -2,6 +2,10 @@ package com.mujahidk.prime;
 
 import java.util.Optional;
 
+/**
+ * Application specific arguments bean. 
+ *
+ */
 public class Arguments {
 
     private final Integer limit;

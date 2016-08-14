@@ -1,5 +1,11 @@
 package com.mujahidk.prime.util;
 
+/**
+ * Helper bean to keep pair of two items.
+ *
+ * @param <T>
+ * @param <V>
+ */
 public class Pair<T,V> {
     private T first;
     private V second;
