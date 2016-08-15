@@ -23,7 +23,7 @@ public class SimpleConsoleHandler
         // Use the finder to find the prime numbers from 1 to given limit.
         new SlowPrimeFinder(limit, collector).find();
         // After finding all, print the prime count.
-        System.out.println("Primes Found: " + collector.count());
+        System.out.println("Prime numbers found: " + collector.count());
     }
 
 }

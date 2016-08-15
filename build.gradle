@@ -13,11 +13,20 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.mujahidk.prime.Application'
+    }
+}
+
+// For 'application' plugin to run the application.
 mainClassName = "com.mujahidk.prime.Application"
 
+// ./gradlew run command default arguments.
 run {
   // Run with sample of 100 and 5 threads.
   args '100','5'
 }
 
+// Jetty HTTP port to run the integrated webserver.
 httpPort = 8080

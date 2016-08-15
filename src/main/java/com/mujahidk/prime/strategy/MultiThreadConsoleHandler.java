@@ -53,6 +53,6 @@ public class MultiThreadConsoleHandler
             }
         }
         // When all threads die, print the count of prime numbers collected by collector.
-        System.out.println("Total collected primes: " + collector.count());
+        System.out.println("Prime numbers found: " + collector.count());
     }
 }
