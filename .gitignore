@@ -1,0 +1,9 @@
+.gradle
+/build/
+prime.iml
+prime.ipr
+prime.iws
+/bin/
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
