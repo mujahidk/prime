@@ -46,7 +46,7 @@ public class SlowPrimeFinder
      * Start looking for prime numbers in the given range.
      */
     public void find() {
-        // ** java 8 ** streams, lambda uses.
+        // ** java 8 ** stream, lambda uses.
         IntStream.rangeClosed(this.start, this.end)
 //                .parallel() // Uncomment if parallel processing is required.
                 .filter(number -> isPrime(number)) // Check if the number is prime.
